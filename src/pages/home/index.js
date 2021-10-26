@@ -8,8 +8,10 @@ function Home() {
 
     useEffect(()=>{
         const initializeUser = () => {
-            setUser({...firebase.auth().currentUser.multiFactor['user']})
-            console.log(user)
+            if(firebase.auth().currentUser!==null){
+                setUser({...firebase.auth().currentUser.multiFactor['user']})
+                console.log(firebase.auth().currentUser.multiFactor['user'])
+            }
         }
         initializeUser()
     },[])
@@ -21,7 +23,7 @@ function Home() {
     
     return (
         <div onClick={signOut}>
-            <NavBar imageProfile={user.photoURL} logout={signOut}/>
+            <NavBar imageProfile={user.photoURL} logout={signOut} name={user.displayName}/>
         </div>
     )
 }

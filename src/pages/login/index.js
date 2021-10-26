@@ -9,7 +9,6 @@ const Login = () => {
   const signIn = () => {
       console.log(firebase)
       firebase.auth().signInWithPopup(googleAuthProvider).then((re=>{
-          console.log(re)
       })).catch(err => {
           console.log(err)
       }) 
@@ -30,11 +29,7 @@ const Login = () => {
               <img src={GoogleIcon} />
               Iniciar sesión con Google
             </div>
-            <div className="login-button">
-              {" "}
-              <img src={GoogleIcon} />
-              Registrarse con Google
-            </div>
+           
           </div>
           <hr id="separator-login"></hr>
           <div className="description-container">
