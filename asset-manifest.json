@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/SendApp/static/css/main.c6caad12.chunk.css",
+    "main.js": "/SendApp/static/js/main.3dbf6684.chunk.js",
+    "main.js.map": "/SendApp/static/js/main.3dbf6684.chunk.js.map",
+    "runtime-main.js": "/SendApp/static/js/runtime-main.15629e1d.js",
+    "runtime-main.js.map": "/SendApp/static/js/runtime-main.15629e1d.js.map",
+    "static/js/2.72574ceb.chunk.js": "/SendApp/static/js/2.72574ceb.chunk.js",
+    "static/js/2.72574ceb.chunk.js.map": "/SendApp/static/js/2.72574ceb.chunk.js.map",
+    "static/js/3.9c2e376d.chunk.js": "/SendApp/static/js/3.9c2e376d.chunk.js",
+    "static/js/3.9c2e376d.chunk.js.map": "/SendApp/static/js/3.9c2e376d.chunk.js.map",
+    "index.html": "/SendApp/index.html",
+    "static/css/main.c6caad12.chunk.css.map": "/SendApp/static/css/main.c6caad12.chunk.css.map",
+    "static/js/2.72574ceb.chunk.js.LICENSE.txt": "/SendApp/static/js/2.72574ceb.chunk.js.LICENSE.txt",
+    "static/media/Group 4.a139693d.png": "/SendApp/static/media/Group 4.a139693d.png",
+    "static/media/edit.c20a026b.png": "/SendApp/static/media/edit.c20a026b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.15629e1d.js",
+    "static/js/2.72574ceb.chunk.js",
+    "static/css/main.c6caad12.chunk.css",
+    "static/js/main.3dbf6684.chunk.js"
+  ]
+}
