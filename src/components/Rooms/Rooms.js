@@ -1,39 +1,64 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./Rooms.css";
 import questionary from "../questionary/questionary";
+import Delete from '../../assets/images/delete.png';
+import Edit from '../../assets/images/edit.png';
+const Rooms = ({ messages, handleChat,id, deleteSelectChat, editSelectedChat, searchAction}) => {
+  const selectChat = (chat) => {
+    console.log(chat);
+    handleChat(chat);
+  };
 
-class Rooms extends Component{
+  const [search,setSearch] = useState('')
 
-    constructor(){
-        super();
-        this.state = {
-            qsts: [
-            {id: 0, text:"Questionario 1",description:'Hola!', time:"12:00"},
-            {id: 1, text:"Questionario 2",description:'Pregunta!', time:"12:10"}
-            ]
-        }
-    }
+  const handleChange = (e)=> {
+    const {value} = e.target;
+    setSearch(value)
+    console.log(search)
+  }
 
-    render(){
-        const {qsts} = this.state;
-        const qustionaryList = qsts.map(quest => {
-            return (<li>
-                        <questionary>{quest.text} {quest.description} {quest.time}</questionary>
-                    </li>
-                    
-        )});
-        return(
-            <div id="contenedor">
-                <div>
-                    <input type="text"></input>
-                    <button>BUSCAR</button>
-                </div>
-                <div>
-                    {qustionaryList}
-                </div>
+  const editChat = (chat) =>{
+    editSelectedChat(chat);
+  }
+
+  const deleteChat = (chat) => {
+    deleteSelectChat(chat)
+  }
+
+  const searchEvent = () => {
+    searchAction(search)
+  }
+
+  return (
+    <div id="contenedor">
+      <div>
+        <input onChange={handleChange} placeholder="Buscar" type="text"></input>
+        <button onClick={searchEvent}>BUSCAR</button>
+      </div>
+      <div className="container-chats">
+        {messages ? (
+          messages.map((quest) => (
+            <div
+              onClick={() => selectChat(quest)}
+              key={quest.id}
+              className="question-item"
+            >
+              <div className="question-item-image">
+                <img src={quest.img} />
+              </div>
+              {quest.message}
+              {quest.id===id?(<img onClick={()=>editChat(quest)} src={Edit}/>):''
+              }
+              {quest.id===id?(<img onClick={()=>deleteChat(quest)} src={Delete}/>):''
+              }
             </div>
-        )
-    }
-}
+          ))
+        ) : (
+          <></>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default Rooms;

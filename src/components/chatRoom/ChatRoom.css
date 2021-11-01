@@ -1,47 +1,65 @@
+.chat-container{
+    width: 900px;
+    height: 400px;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
 
-li{
-    max-width: 90%;
-    background-color: rgb(200, 226, 226);
-    border: 1px solid grey;
-    border-radius: 3px;
-    list-style-type: none;
+
+.chat-container-message {
+    width: 300px;
+    height: 100px;
+    background-color: #6358dcb6;
+    border-radius: 10px;
+    font-weight: 400;
+    padding-left: 10px;
+    color: white;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.chat-container-img img{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+.input-container{
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
-.class-messages{
-    overflow-y: scroll;
-    scroll-behavior:  auto;
+.input-container input{
+    width: 350px;
+    height: 40px;
+}
+
+.input-container button{
+    height: 40px;
+    margin-left: 40px;
+    width: 150px;
+    height: 40px;
+    background-color: #6358DC;
+    border-radius: 6px;
+    color: white;
     display: flex;
-    flex-direction: column;
-    margin-left: 5%;
-    height: 100%;
-   
-    
-}
-#id-messages{
-    width: 70%;
-    margin: 10%;
-    background-color: indigo;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
 }
 
-.class-send{
-
-    width:100%;
-    max-height: 50px;
-    margin-top: 40%;
+.input-container button:hover {
+    background-color: #6358dcb6;
+    cursor: pointer;  
 }
- #btn-send{
-     margin-left: 2%;
-     height: 25px;
-     background-color: rgb(93, 218, 68);
-     border:2px solid rgb(66, 170, 46);
-     border-radius: 4px;
- }
 
- #input-msg{
-     height: 20px;
-     width: 85%;
-     border-radius: 4px;
-     border: 2px solid grey;
-     
- }

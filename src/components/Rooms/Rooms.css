@@ -1,4 +1,42 @@
 #contenedor{
-    
+    height: 500px;
     width: 30%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+.question-item {
+    width: 300px;
+    height: 90px;
+    background-color: #6358DC;
+    margin-left: 10px;
+    border-radius:20px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.question-item:hover {
+    background-color: #6358dcb6;
+    cursor: pointer;
+}
+
+.question-item-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 200px;
+    margin-left: 10px;
+}
+
+.question-item img{
+    width:30px;
+    height:30px;
+}
+.question-item-image img{
+    width: 50px;
+    height: 50px;
+    border-radius:70px; 
 }
