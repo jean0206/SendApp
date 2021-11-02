@@ -33,7 +33,7 @@ const ChatRoom = ({ chat, sendAction}) => {
         <input
           type="text"
           className="input-message"
-          placeholder="Respondeer"
+          placeholder="Responder"
           onChange={handleChange}
         ></input>
         <button onClick={sendInfo}>Enviar</button>
